@@ -8,7 +8,7 @@ function Home() {
       <div className="carousel">
         {[1, 2, 3, 4].map((_, index) => (
           <div key={index} className="carousel-card">
-            <img src={`src/img/image+${index + 1}`} alt={`Image ${index + 1}`} />
+            <img src={`src/img/image${index + 1}`} alt={`Image ${index + 1}`} />
           </div>
         ))}
       </div>
