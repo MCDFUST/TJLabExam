@@ -1,17 +1,18 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Home() {
   return (
     <div>
       <h2>Welcome to the Home Page</h2>
       <p>This is a protected page accessible after login.</p>
-      <div className="carousel">
-        {[1, 2, 3, 4].map((_, index) => (
-          <div key={index} className="carousel-card">
-            <img src={`src/img/image${index + 1}`} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
-      </div>
+      <Carousel showArrows={true} autoPlay={true} infiniteLoop={true}>
+                <div><img src="image1.png" alt="Image 1" /></div>
+                <div><img src="image2.png" alt="Image 2" /></div>
+                <div><img src="image3.png" alt="Image 3" /></div>
+                <div><img src="image4.png" alt="Image 4" /></div>
+        </Carousel>
     </div>
   );
 }
